@@ -1,0 +1,19 @@
+//Реализовать с использованием модификатора params метод подсчета суммы
+//элементов, переданных в метод
+
+void Sum(params double[] numbers)
+{
+    double total = 0;
+    foreach (double n in numbers)
+    {
+        total += n;
+    }
+    Console.WriteLine($"Итоговая сумма: {total}");
+}
+
+double[] nums = { 34.55, 2.99, 3, 40, 57 };
+Sum(nums);
+
+Sum(0, 5, 5, 0);
+Sum(10, 2, 3);
+Sum();
